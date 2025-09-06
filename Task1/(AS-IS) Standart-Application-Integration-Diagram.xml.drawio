@@ -1,0 +1,165 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram id="integration-diagram" name="Application Integration">
+    <mxGraphModel dx="1332" dy="1729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor-client" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#4169E1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="299" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-front-office" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FF69B4;" parent="1" vertex="1">
+          <mxGeometry x="50" y="149" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="front-office-label" value="Сотрудник&#xa;отделения" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="194" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-back-office-dep" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#4169E1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="49" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="back-office-dep-label" value="Сотрудники&#xa;бэк-офиса&#xa;(депозиты)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="94" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-back-office-credit" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FF69B4;" parent="1" vertex="1">
+          <mxGeometry x="50" y="689" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="back-office-credit-label" value="Сотрудник&#xa;кредитного&#xa;отдела" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="740" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-cc" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#4169E1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="519" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cc-label" value="Сотрудник&#xa;кол-центра" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="569" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="app-abs" value="АБС&#xa;(Автоматизированная&#xa;банковская система)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6EFFA;strokeColor=#3671D5;fontSize=12;fontStyle=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="400" y="39" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="app-ib" value="&lt;b&gt;Интернет-банк&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6EFFA;strokeColor=#3671D5;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="190" y="299" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-cc" value="&lt;b&gt;Система&lt;br&gt;кол-центра&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6EFFA;strokeColor=#3671D5;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="200" y="509" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="app-credit-conveyor" value="Кредитный&#xa;конвейер" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6EFFA;strokeColor=#3671D5;fontSize=12;fontStyle=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="410" y="674" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="app-scoring" value="&lt;b&gt;Система&lt;br&gt;кредитного&lt;br&gt;скоринга&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6EFFA;strokeColor=#3671D5;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="710" y="504" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="app-sms" value="&lt;b&gt;СМС-шлюз&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6EFFA;strokeColor=#3671D5;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="710" y="109" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-bki" value="&lt;b&gt;Бюро кредитных&lt;br&gt;историй&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="509" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-telecom" value="&lt;b&gt;Телеком-оператор&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="109" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="Использует" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="actor-client" target="app-ib" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow6" value="Работает&#xa;в системе" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="actor-cc" target="app-cc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow9" value="Выгрузка заявок&lt;br&gt;(раз в день, через БД)" style="endArrow=classic;html=1;exitX=0.692;exitY=1.007;exitDx=0;exitDy=0;dashed=1;strokeColor=#ff0000;exitPerimeter=0;" parent="1" source="app-abs" edge="1">
+          <mxGeometry x="-0.1259" relative="1" as="geometry">
+            <mxPoint x="540" y="670" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow10" value="Работает&lt;br&gt;с заявкой" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="actor-back-office-credit" target="app-credit-conveyor" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow13" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Запрос кредитной&lt;br&gt;истории (API)" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="app-scoring" target="ext-bki" edge="1">
+          <mxGeometry x="-0.0667" y="9" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow14" value="Возврат результата&lt;br&gt;скоринга" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;dashed=1;entryX=1.002;entryY=0.643;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="app-scoring" target="app-credit-conveyor" edge="1">
+          <mxGeometry x="0.2064" y="1" relative="1" as="geometry">
+            <mxPoint x="590" y="709" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow15" value="Выгрузка решения&lt;br&gt;(раз в день, через БД)" style="endArrow=classic;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=#ff0000;" parent="1" target="app-abs" edge="1">
+          <mxGeometry x="-0.2432" y="3" relative="1" as="geometry">
+            <mxPoint x="450" y="670" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow16" value="Отправка СМС" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="app-abs" target="app-sms" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="129" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow17" value="Отправка СМС" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="app-sms" target="ext-telecom" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Зачисление средств &lt;br&gt;на счет клиента&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="430" y="304" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-2" value="Посещение отделения" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor-client" target="front-office-label">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="249" as="sourcePoint" />
+            <mxPoint x="425" y="249" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-3" value="Оформляет заявку" style="endArrow=classic;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="actor-front-office">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="184" as="sourcePoint" />
+            <mxPoint x="400" y="179" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-4" value="Интеграция через БД" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;entryX=-0.004;entryY=0.584;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="app-abs">
+          <mxGeometry x="-0.7826" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="249" />
+            </Array>
+            <mxPoint x="270" y="299" as="sourcePoint" />
+            <mxPoint x="380" y="249" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-5" value="Звонок в банк" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="client-label" target="actor-cc">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69.6" y="519" as="sourcePoint" />
+            <mxPoint x="150" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="client-label" value="Клиент" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="30" y="344" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-6" value="Вызов скоринга (API)" style="endArrow=classic;html=1;entryX=0.203;entryY=1.011;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="app-credit-conveyor" target="app-scoring">
+          <mxGeometry x="0.4369" relative="1" as="geometry">
+            <mxPoint x="600" y="689" as="sourcePoint" />
+            <mxPoint x="750" y="483" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-7" value="Работает в системе" style="endArrow=classic;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="80" as="sourcePoint" />
+            <mxPoint x="400" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-8" value="Передача обращений" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;entryX=-0.004;entryY=0.584;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="app-cc">
+          <mxGeometry x="-0.3502" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="360" />
+            </Array>
+            <mxPoint x="271" y="410" as="sourcePoint" />
+            <mxPoint x="400" y="360" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arwsg7vq_JChFSeBn4pD-9" value="Запрос данных из АБС" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1.004;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="app-scoring" target="app-abs">
+          <mxGeometry x="0.0172" relative="1" as="geometry">
+            <mxPoint x="780" y="413" as="sourcePoint" />
+            <mxPoint x="680" y="264" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
