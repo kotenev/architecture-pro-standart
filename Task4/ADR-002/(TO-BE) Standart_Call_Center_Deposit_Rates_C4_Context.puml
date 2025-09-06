@@ -1,0 +1,27 @@
+@startuml (TO-BE) Call Center Deposit Rates Integration Context Diagram
+title (TO-BE) Call Center Deposit Rates Integration Context Diagram
+
+top to bottom direction
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(call_center_employee, "Сотрудник кол-центра", "Консультирует клиентов по депозитным ставкам")
+Person(partner_call_center_employee, "Сотрудник партнерского кол-центра", "Консультирует клиентов по депозитным ставкам")
+Person(back_office, "Сотрудник бэк-офиса", "Обновляет депозитные ставки")
+
+System_Ext(call_center_system, "Система кол-центра", "Внутренняя система для обработки обращений (Java / Spring Boot)")
+System_Ext(partner_call_center_system, "Система партнерского кол-центра", "Внешняя система партнера")
+System_Ext(sftp_server, "SFTP-сервер", "Сервер для обмена файлами с партнерами")
+
+System(deposit_service, "Сервис депозитных заявок", "Сервис с расширенным функционалом передачи ставок")
+
+Rel(call_center_employee, call_center_system, "Консультирует клиентов используя актуальные ставки")
+Rel(partner_call_center_employee, partner_call_center_system, "Консультирует клиентов используя актуальные ставки")
+
+Rel(deposit_service, call_center_system, "Передает актуальные ставки", "REST API")
+Rel(deposit_service, sftp_server, "Загружает файлы со ставками", "SFTP")
+Rel(partner_call_center_system, sftp_server, "Скачивает файлы со ставками", "SFTP")
+
+Rel(back_office, deposit_service, "Передает обновленные ставки")
+
+@enduml
