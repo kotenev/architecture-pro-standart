@@ -1,0 +1,36 @@
+@startuml (TO-BE) Credit Application System Context Diagram
+title (TO-BE) Credit Application System Context Diagram
+
+top to bottom direction
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(potential_client, "Потенциальный клиент", "Подает заявку на кредит через сайт")
+Person(bank_client, "Клиент банка", "Подает заявку на заранее одобренный кредит")
+Person(back_office_manager, "Менеджер бэк-офиса", "Обрабатывает кредитные заявки")
+
+System_Ext(bank_website, "Сайт банка", "Веб-сайт для подачи заявок")
+System_Ext(internet_bank, "Интернет-банк", "Система онлайн-банкинга")
+System_Ext(credit_conveyor, "Кредитный конвейер", "BPM-система обработки заявок")
+System_Ext(scoring_system, "Система кредитного скоринга", "ML-система оценки рисков")
+System_Ext(credit_bureau, "Бюро кредитных историй", "Внешний источник кредитных данных")
+System_Ext(sms_gateway, "СМС-шлюз", "Система отправки уведомлений")
+System_Ext(abs_system, "АБС", "Автоматизированная банковская система")
+
+System(credit_service, "Сервис кредитных заявок", "Микросервис для обработки онлайн-заявок на кредит")
+
+Rel(potential_client, bank_website, "Подает заявку на кредит")
+Rel(bank_client, internet_bank, "Подает заявку на заранее одобренный кредит")
+Rel(back_office_manager, credit_conveyor, "Обрабатывает заявки")
+
+Rel(bank_website, credit_service, "Передает заявки", "HTTPS/REST")
+Rel(internet_bank, credit_service, "Передает заявки и запрашивает предложения", "HTTPS/REST")
+Rel(credit_service, scoring_system, "Запрашивает скоринг", "HTTPS/REST")
+Rel(credit_service, credit_conveyor, "Передает заявки на обработку", "HTTPS/REST")
+Rel(credit_service, sms_gateway, "Отправляет уведомления", "HTTPS/REST")
+Rel(credit_service, abs_system, "Синхронизирует данные клиентов", "DB Connection")
+
+Rel(scoring_system, credit_bureau, "Запрашивает кредитную историю", "HTTPS/REST")
+Rel(credit_conveyor, abs_system, "Передает одобренные заявки", "Daily Batch")
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+title (TO-BE) Standart Deposit Context Diagram
+
+top to bottom direction
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(client, "Клиент", "Потенциальный или существующий клиент банка")
+Person(back_office, "Сотрудник бэк-офиса", "Обрабатывает заявки в АБС")
+
+System_Ext(site, "Сайт", "Публичный сайт банка (PHP, React.js)")
+System_Ext(ib, "Интернет-банк", "Система ДБО для существующих клиентов (ASP.NET)")
+System_Ext(call_center_system, "Система кол-центра", "Внешняя система для обработки обращений")
+System_Ext(abs, "АБС", "Автоматизированная банковская система (Delphi, Oracle)")
+
+System(deposit_service, "Сервис депозитных заявок", "Новый микросервис для обработки онлайн-заявок")
+
+Rel(client, site, "Подает заявку на депозит")
+Rel(client, ib, "Подает заявку на депозит")
+
+Rel(site, deposit_service, "Отправляет заявку нового клиента", "JSON/HTTPS")
+Rel(ib, deposit_service, "Отправляет заявку существующего клиента", "JSON/HTTPS")
+
+Rel(deposit_service, call_center_system, "Создает обращение для звонка", "API")
+Rel_Back(abs, deposit_service, "Асинхронно забирает заявки")
+
+Rel(back_office, abs, "Обрабатывает заявки")
+
+@enduml
