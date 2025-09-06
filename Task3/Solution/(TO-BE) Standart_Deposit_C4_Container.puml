@@ -17,7 +17,7 @@ System_Boundary(c1, "Сервис депозитных заявок") {
     ContainerDb(db, "База данных заявок", "PostgreSQL", "Хранит все онлайн-заявки")
 }
 
-ContainerDb(staging_db, "Промежуточная БД", "MS SQL", "Таблица для асинхронной передачи заявок в АБС")
+ContainerDb(staging_db, "Middleware БД", "PostgreSQL", "Таблица для асинхронной передачи заявок в АБС")
 
 Rel(client, site, "Подает заявку")
 Rel(client, ib, "Подает заявку")
@@ -29,6 +29,6 @@ Rel(api, db, "Сохраняет/Читает заявку", "JDBC")
 Rel(api, call_center_system, "Создает обращение", "API")
 Rel(api, staging_db, "Записывает заявку для АБС", "JDBC")
 
-Rel(abs, staging_db, "Читает новые заявки (batch job)", "DB Link / ETL")
+Rel(abs, staging_db, "Читает новые заявки (batch job)", "ETL")
 
 @enduml
